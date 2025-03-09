@@ -12,11 +12,11 @@ const UserSigned = ({ setLogin, setRegister }) => {
                         <div className='pinned-instruments flex flex-wrap justify-between items-center h-full font-semibold px-[15px] border-r border-[var(--color-border-default)]'>
                             <div className='instrument-widget flex-1 inline-flex items-center'>
                                 <span className='tradingsymbol link-chart '></span><span className='text-[0.75rem] font-semibold'>NIFTY 50</span>
-                                <span class="wrap inline-block font-semibold text-[0.75rem] ms-2"><span class="last-price up text-[var(--color-text-8)] mr-[2px]">22552.50</span> <span class="price-change dim"><span class="all dim text-[0.625rem] opacity-70">7.80(0.03<span class="text-xxsmall opacity-70">%</span>)</span></span></span>
+                                <span className="wrap inline-block font-semibold text-[0.75rem] ms-2"><span className="last-price up text-[var(--color-text-8)] mr-[2px]">22552.50</span> <span className="price-change dim"><span className="all dim text-[0.625rem] opacity-70">7.80(0.03<span className="text-xxsmall opacity-70">%</span>)</span></span></span>
                             </div>
                             <div className='instrument-widget flex-1 inline-flex items-center'>
                                 <span className='tradingsymbol link-chart'></span><span className='text-[0.75rem] font-semibold'>SENSEX</span>
-                                <span class="wrap inline-block font-semibold text-[0.75rem] ms-2"><span class="last-price up text-[var(--color-text-10)] mr-[2px]">22552.50</span> <span class="price-change dim"><span class="all dim text-[0.625rem] opacity-70">7.80(0.03<span class="text-xxsmall opacity-70">%</span>)</span></span></span>
+                                <span className="wrap inline-block font-semibold text-[0.75rem] ms-2"><span className="last-price up text-[var(--color-text-10)] mr-[2px]">22552.50</span> <span className="price-change dim"><span className="all dim text-[0.625rem] opacity-70">7.80(0.03<span className="text-xxsmall opacity-70">%</span>)</span></span></span>
                             </div>
                         </div>
                     </div>
