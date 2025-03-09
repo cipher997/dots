@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5"; // Import Close Icon
 const Login = ({ setLogin, setRegister, setForgot }) => {
   return (
     <>
-      <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-black flex items-center justify-center z-50 popup-content">
         {/* Modal Box */}
         <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
           {/* Close Button */}
