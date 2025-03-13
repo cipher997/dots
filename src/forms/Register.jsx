@@ -49,7 +49,7 @@ const Register = ({ setLogin, setRegister, setForgot }) => {
 
             {/* Sign Up & Navigation Buttons */}
             <div className="flex justify-between mt-4">
-              <button className="w-full bg-green-500 hover:bg-green-600 text-white p-2 rounded-lg transition">
+              <button className="w-full bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg transition">
                 Sign Up
               </button>
             </div>
