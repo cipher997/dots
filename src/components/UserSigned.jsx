@@ -63,10 +63,10 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
                 <a href='#' className='text-gray-700 hover:text-black'>
                     <FaRegBell size={20} />
                 </a>
-                <button className='bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg text-sm cursor-pointer' onClick={() => setLogin(true)}>
+                <button className='rounded-lg bg-red-600 py-1 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 cursor-pointer' onClick={() => setLogin(true)}>
                     LogIn
                 </button>
-                <button className='bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-lg text-sm cursor-pointer' onClick={() => setRegister(true)}>
+                <button className='rounded-lg bg-blue-500 py-1 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 cursor-pointer' onClick={() => setRegister(true)}>
                     SignUp
                 </button>
             </div>
