@@ -4,7 +4,7 @@ import { MdTrendingUp, MdShoppingCart } from "react-icons/md";
 
 const Dashboard = () => {
   return (
-    <div className="flex w-full min-h-screen p-4">
+    <div className="flex w-full min-h-screen pt-10">
       <main className="flex-1  rounded-xl p-6 max-w-7xl mx-auto">
         {/* Header */}
         <header className="flex flex-col sm:flex-row justify-between items-center mb-6">
