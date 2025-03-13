@@ -25,7 +25,7 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
 
     return (
         <div className='app page-ipo'>
-            <header className='w-full sticky top-0 bg-white shadow-md py-3 px-4 md:px-6 flex items-center justify-between'>
+            <header className='w-full fixed top-0 bg-white shadow-md py-3 px-4 md:px-6 flex items-center justify-between'>
                 {/* Logo & Menu Button */}
                 <div className='flex items-center space-x-4'>
                     <button className='md:hidden' onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
