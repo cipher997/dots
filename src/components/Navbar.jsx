@@ -11,9 +11,9 @@ import Bids from './Bids';
 import Funds from './Funds';
 
 const Navbar = () => {
-    const [login, setLogin] = useState(false) 
-    const [register, setRegister] = useState(false) 
-    const [forgot, setForgot] = useState(false) 
+    const [login, setLogin] = useState(false)
+    const [register, setRegister] = useState(false)
+    const [forgot, setForgot] = useState(false)
     const [activeComponent, setActiveComponent] = useState('Dashboard');
 
     const renderComponent = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <UserSigned setLogin={setLogin} setRegister={setRegister} setActiveComponent={setActiveComponent}/>
+            <UserSigned setLogin={setLogin} setRegister={setRegister} setActiveComponent={setActiveComponent} />
             {login ? (<Login setLogin={setLogin} setRegister={setRegister} setForgot={setForgot} />) : (null)}
             {register ? (<Register setRegister={setRegister} setLogin={setLogin} setForgot={setForgot} />) : (null)}
             {forgot ? (<Forgot setForgot={setForgot} setLogin={setLogin} setRegister={setRegister} />) : (null)}
