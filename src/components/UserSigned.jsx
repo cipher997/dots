@@ -1,66 +1,90 @@
-import React from 'react'
+import React, { useState } from 'react'
 import viteLogo from '/vite.svg'
 import { FaRegBell } from 'react-icons/fa'; // Importing icons
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { HiMenu, HiX } from 'react-icons/hi';
+import { MdDashboard, MdShoppingCart, MdTrendingUp, MdAccountBalanceWallet, MdAttachMoney, MdAssessment } from 'react-icons/md';
 
 const UserSigned = ({ setLogin, setRegister }) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const menuItems = [
+        { name: 'Dashboard', icon: <MdDashboard size={20} /> },
+        { name: 'Orders', icon: <MdShoppingCart size={20} /> },
+        { name: 'Holdings', icon: <MdTrendingUp size={20} /> },
+        { name: 'Positions', icon: <MdAssessment size={20} /> },
+        { name: 'Bids', icon: <MdAttachMoney size={20} /> },
+        { name: 'Funds', icon: <MdAccountBalanceWallet size={20} /> },
+    ];
     return (
-        <div id='app' className='app page-ipo'>
-            <div className='header min-w-[320px] box-border z-[9] w-full sticky top-0 bg-[var(--color-bg-default)] shadow-[0_1px_5px_0_rgba(var(--color-border-5--rgb),0.1)] py-3'>
-                <div className='wrapper flex mx-2'>
-                    <div className='header-left flex-[0_0_calc(var(--left-content-width)_+_1px)]'>
-                        <div className='pinned-instruments flex flex-wrap justify-between items-center h-full font-semibold px-[15px] border-r border-[var(--color-border-default)]'>
-                            <div className='instrument-widget flex-1 inline-flex items-center'>
-                                <span className='tradingsymbol link-chart '></span><span className='text-[0.75rem] font-semibold'>NIFTY 50</span>
-                                <span className="wrap inline-block font-semibold text-[0.75rem] ms-2"><span className="last-price up text-[var(--color-text-8)] mr-[2px]">22552.50</span> <span className="price-change dim"><span className="all dim text-[0.625rem] opacity-70">7.80(0.03<span className="text-xxsmall opacity-70">%</span>)</span></span></span>
-                            </div>
-                            <div className='instrument-widget flex-1 inline-flex items-center'>
-                                <span className='tradingsymbol link-chart'></span><span className='text-[0.75rem] font-semibold'>SENSEX</span>
-                                <span className="wrap inline-block font-semibold text-[0.75rem] ms-2"><span className="last-price up text-[var(--color-text-10)] mr-[2px]">22552.50</span> <span className="price-change dim"><span className="all dim text-[0.625rem] opacity-70">7.80(0.03<span className="text-xxsmall opacity-70">%</span>)</span></span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='header-right flex-1 flex relative perspective-[1000px]'>
-                        <a href="" className='logo flex-none inline-flex items-center justify-center leading-[1] mx-[20px] ml-[30px]'>
-                            <img src={viteLogo} alt="" className='w-auto h-[14px]' />
+        <div className='app page-ipo'>
+            <header className='w-full sticky top-0 bg-white shadow-md py-3 px-4 md:px-6 flex items-center justify-between'>
+                {/* Logo & Menu Button */}
+                <div className='flex items-center space-x-4'>
+                    <button className='md:hidden' onClick={() => setMenuOpen(!menuOpen)}>
+                        {menuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+                    </button>
+                    <a href='/' className='flex items-center space-x-2'>
+                        <img src={viteLogo} alt='Logo' className='w-auto h-6' />
+                        <span className='text-lg font-semibold text-gray-700'></span>
+                    </a>
+                </div>
+
+                {/* Desktop Navigation */}
+                <nav className='hidden md:flex md:items-center md:space-x-6'>
+                    {menuItems.map((item) => (
+                        <a key={item.name} href='#' className='flex items-center space-x-2 text-gray-700 hover:text-red-600'>
+                            {item.icon} <span>{item.name}</span>
                         </a>
-                        <nav className='app-nav flex-[4] min-w-[480px] text-right border-r border-[var(--color-border-default)] pr-[5px]'>
-                            <a href="" className='px-[16px] text-[0.75rem] leading-[1] inline-flex items-center justify-center no-underline text-[var(--color-text-default)] hover:text-red-600 transition-colors'>Dashboards</a>
-                            <a href="" className='px-[16px] text-[0.75rem] leading-[1] inline-flex items-center justify-center no-underline text-[var(--color-text-default)] hover:text-red-600 transition-colors'>Orders</a>
-                            <a href="" className='px-[16px] text-[0.75rem] leading-[1] inline-flex items-center justify-center no-underline text-[var(--color-text-default)] hover:text-red-600 transition-colors'>Holdings</a>
-                            <a href="" className='px-[16px] text-[0.75rem] leading-[1] inline-flex items-center justify-center no-underline text-[var(--color-text-default)] hover:text-red-600 transition-colors'>Positions</a>
-                            <a href="" className='px-[16px] text-[0.75rem] leading-[1] inline-flex items-center justify-center no-underline text-[var(--color-text-default)] hover:text-red-600 transition-colors'>Bids</a>
-                            <a href="" className='px-[16px] text-[0.75rem] leading-[1] inline-flex items-center justify-center no-underline text-[var(--color-text-default)] hover:text-red-600 transition-colors'>Funds</a>
-                        </nav>
-                        <div className='right-nav flex ml-[15px] h-full'>
-                            {/* <a href="" className='text-[0.75rem] leading-[1] no-underline text-[var(--color-text-default)] inline-flex items-center justify-center'></a>
-                               <div className='virtual-basket-menu'></div>
-                               <nav className='user-nav perspective'></nav> */}
-                            {/* Cart, Notification, and Login Buttons */}
-                            <div className="right-nav flex ml-[15px] h-full items-center space-x-4">
-                                {/* Cart Icon */}
-                                <a href="#" className="text-gray-700 hover:text-black">
-                                    <AiOutlineShoppingCart size={20} />
-                                </a>
+                    ))}
+                </nav>
 
-                                {/* Notification Icon */}
-                                <a href="#" className=" hover:text-black">
-                                    <FaRegBell size={20} />
-                                </a>
+                {/* Icons & Buttons */}
+                <div className='flex items-center space-x-4'>
+                    <a href='#' className='text-gray-700 hover:text-black'>
+                        <AiOutlineShoppingCart size={20} />
+                    </a>
+                    <a href='#' className='text-gray-700 hover:text-black'>
+                        <FaRegBell size={20} />
+                    </a>
+                    <button className='bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg text-sm' onClick={() => setLogin(true)}>
+                        LogIn
+                    </button>
+                    <button className='bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-lg text-sm' onClick={() => setRegister(true)}>
+                        SignUp
+                    </button>
+                </div>
+            </header>
 
-                                {/* Login & Signup Buttons */}
-                                <a href="#" className="bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg text-sm" onClick={() => setLogin(true)}>
-                                    LogIn
-                                </a>
-                                <a href="#" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-lg text-sm" onClick={() => setRegister(true)}>
-                                    SignUp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            {/* Sidebar Navigation */}
+            <div className={`fixed inset-y-0 left-0 bg-white shadow-lg w-64 p-5 transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 md:hidden flex flex-col`}>
+                {/* Sidebar Header */}
+                <div className='flex items-center justify-between mb-4'>
+                    <a href='/' className='flex items-center space-x-2'>
+                        <img src={viteLogo} alt='Logo' className='w-auto h-6' />
+                        <span className='text-lg font-semibold text-gray-700'>dots</span>
+                    </a>
+                    <button onClick={() => setMenuOpen(false)}>
+                        <HiX size={24} />
+                    </button>
+                </div>
+                
+                {/* Sidebar Menu */}
+                <ul className='flex-1 space-y-4'>
+                    {menuItems.map((item) => (
+                        <li key={item.name}>
+                            <a href='#' className='flex items-center space-x-2 text-gray-700 hover:text-red-600'>
+                                {item.icon} <span>{item.name}</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+
+                {/* Sidebar Footer */}
+                <div className='mt-auto text-center border-t pt-4 text-gray-500 text-sm'>
+                    © 2025 dots. All rights reserved.
                 </div>
             </div>
-            <div className='container wrapper'></div>
         </div>
     )
 }
