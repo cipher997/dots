@@ -21,6 +21,7 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
     const handleNavigationClick = (tabName) => {
         setSelectedTab(tabName);
         setActiveComponent(tabName);
+        setIsSidebarOpen(!isSidebarOpen)
     };
 
     return (
