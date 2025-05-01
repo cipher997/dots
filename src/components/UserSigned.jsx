@@ -29,9 +29,9 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
             <header className='w-full fixed top-0 bg-white shadow-md py-3 px-4 md:px-6 flex items-center justify-between'>
                 {/* Logo & Menu Button */}
                 <div className='flex items-center space-x-4'>
-                    <button className='md:hidden' onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                    {/* <button className='md:hidden' onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                         {isSidebarOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-                    </button>
+                    </button> */}
                     <a href='/' className='flex items-center space-x-2'>
                         <img src={viteLogo} alt='Logo' className='w-auto h-6' />
                         <span className='text-lg font-semibold text-gray-700'></span>
@@ -73,9 +73,9 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
             </header>
 
             {/* Sidebar Navigation */}
-            <div className={`fixed inset-y-0 left-0 bg-white shadow-lg w-64 p-5 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 md:hidden flex flex-col`}>
+            {/* <div className={`fixed inset-y-0 left-0 bg-white shadow-lg w-64 p-5 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 md:hidden flex flex-col`}> */}
                 {/* Sidebar Header */}
-                <div className='flex items-center justify-between mb-4'>
+                {/* <div className='flex items-center justify-between mb-4'>
                     <a href='/' className='flex items-center space-x-2'>
                         <img src={viteLogo} alt='Logo' className='w-auto h-6' />
                         <span className='text-lg font-semibold text-gray-700'>dots</span>
@@ -83,10 +83,10 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
                     <button onClick={() => setIsSidebarOpen(false)}>
                         <HiX size={24} />
                     </button>
-                </div>
+                </div> */}
 
                 {/* Sidebar Menu */}
-                <ul className='flex-1 space-y-4'>
+                {/* <ul className='flex-1 space-y-4'>
                     {navigationLinks.map((link) => (
                         <li key={link.label}>
                             <a
@@ -101,13 +101,13 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
                             </a>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
 
                 {/* Sidebar Footer */}
-                <div className='mt-auto text-center border-t pt-4 text-gray-500 text-sm'>
+                {/* <div className='mt-auto text-center border-t pt-4 text-gray-500 text-sm'>
                     © 2025 dots. All rights reserved.
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
         </div>
     )
 }
