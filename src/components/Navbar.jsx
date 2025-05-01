@@ -44,7 +44,7 @@ const Navbar = () => {
             {login ? (<Login setLogin={setLogin} setRegister={setRegister} setForgot={setForgot} />) : (null)}
             {register ? (<Register setRegister={setRegister} setLogin={setLogin} setForgot={setForgot} />) : (null)}
             {forgot ? (<Forgot setForgot={setForgot} setLogin={setLogin} setRegister={setRegister} />) : (null)}
-            <div className="p-4">{renderComponent()}</div>
+            <div className="">{renderComponent()}</div>
 
         </div>
     )
