@@ -9,6 +9,7 @@ import Holdings from './Holdings';
 import Positions from './Positions';
 import Bids from './Bids';
 import Funds from './Funds';
+import GameTable from './GameTable';
 
 const Navbar = () => {
     const [login, setLogin] = useState(false)
@@ -39,10 +40,12 @@ const Navbar = () => {
     return (
         <div>
             <UserSigned setLogin={setLogin} setRegister={setRegister} setActiveComponent={setActiveComponent} />
+            <GameTable setActiveComponent={setActiveComponent} activeComponent={activeComponent}/>
             {login ? (<Login setLogin={setLogin} setRegister={setRegister} setForgot={setForgot} />) : (null)}
             {register ? (<Register setRegister={setRegister} setLogin={setLogin} setForgot={setForgot} />) : (null)}
             {forgot ? (<Forgot setForgot={setForgot} setLogin={setLogin} setRegister={setRegister} />) : (null)}
             <div className="p-4">{renderComponent()}</div>
+
         </div>
     )
 }
