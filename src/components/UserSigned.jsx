@@ -15,7 +15,7 @@ const UserSigned = ({ setLogin, setRegister, setActiveComponent }) => {
         { label: 'Holdings', icon: <MdTrendingUp size={20} /> },
         { label: 'Positions', icon: <MdAssessment size={20} /> },
         { label: 'Bids', icon: <MdAttachMoney size={20} /> },
-        { label: 'Funds', icon: <MdAccountBalanceWallet size={20} /> },
+        { label: 'Profile', icon: <MdAccountBalanceWallet size={20} /> },
     ];
 
     const handleNavigationClick = (tabName) => {

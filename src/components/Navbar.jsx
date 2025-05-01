@@ -8,7 +8,7 @@ import Orders from './Orders';
 import Holdings from './Holdings';
 import Positions from './Positions';
 import Bids from './Bids';
-import Funds from './Funds';
+import Profile from './Profile';
 import GameTable from './GameTable';
 
 const Navbar = () => {
@@ -29,8 +29,8 @@ const Navbar = () => {
                 return <Positions />;
             case 'Bids':
                 return <Bids />;
-            case 'Funds':
-                return <Funds />;
+            case 'Profile':
+                return <Profile />;
             default:
                 return <Dashboard />;
         }

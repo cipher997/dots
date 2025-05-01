@@ -4,7 +4,7 @@ import {
   MdShoppingCart,
   MdTrendingUp,
   MdAccountBalanceWallet,
-  MdAttachMoney
+  MdPerson 
 } from 'react-icons/md';
 
 const navItems = [
@@ -12,7 +12,7 @@ const navItems = [
   { id: 'Holdings', label: 'Holdings', icon: MdTrendingUp },
   { id: 'Dashboard', label: 'Dashboard', icon: MdDashboard },
   { id: 'Positions', label: 'Positions', icon: MdAccountBalanceWallet },
-  { id: 'Funds', label: 'Funds', icon: MdAttachMoney },
+  { id: 'Profile', label: 'Profile', icon: MdPerson  },
 ];
 
 const GameTable = ({ setActiveComponent, activeComponent }) => {
