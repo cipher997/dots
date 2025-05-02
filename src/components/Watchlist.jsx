@@ -20,12 +20,12 @@ const Watchlist = () => {
                   className="flex items-center justify-between p-4  last:border-b-0 hover:bg-gray-50 transition"
                 >
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
-                    <p className="text-sm text-gray-500">{item.symbol}</p>
+                    <h3 className="text-md font-semibold text-gray-800">{item.name}</h3>
+                    <p className="text-xs text-gray-500">{item.symbol}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-lg font-bold text-gray-700">${item.price.toFixed(2)}</p>
-                    <p className={`text-sm ${item.change.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
+                    <p className="text-md font-bold text-gray-700">${item.price.toFixed(2)}</p>
+                    <p className={`text-xs ${item.change.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
                       {item.change}
                     </p>
                   </div>
