@@ -23,7 +23,7 @@ const Positions = () => {
     <div className="min-h-screen bg-gray-100 pt-4">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md">
         {/* Header */}
-        <div className="flex justify-between items-center p-4 border-b">
+        <div className="flex justify-between items-center p-4 ">
           <div>
             <h1 className="text-xl font-bold">NIFTY 50: 24346.70</h1>
             <h1 className="text-md text-green-500 font-medium">+12.50 (+0.05%)</h1>
@@ -35,7 +35,7 @@ const Positions = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex border-b">
+        <div className="flex">
           {['Holdings', 'Positions'].map(tab => (
             <button
               key={tab}
@@ -61,7 +61,7 @@ const Positions = () => {
               </div>
               <div className="space-y-3">
                 {holdingsData.map((item, idx) => (
-                  <div key={idx} className="flex justify-between items-center border-b pb-2">
+                  <div key={idx} className="flex justify-between items-center pb-2">
                     <div>
                       <p className="font-semibold">{item.name}</p>
                       <p className="text-sm text-gray-500">Qty: {item.qty}</p>

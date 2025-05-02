@@ -10,13 +10,7 @@ const Dashboard = () => {
   const [activeCallTab, setActiveCallTab] = useState("Latest");
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#f9fafb]">
-      {/* Header */}
-      <div className="p-4 flex justify-between items-center">
-        <h1 className="text-lg font-semibold">Welcome Dinkar</h1>
-        <FiBell className="text-xl" />
-      </div>
-
+    <div className="flex flex-col w-full min-h-screen bg-[#f9fafb] pt-15">
       {/* Indices Cards */}
       <div className="flex gap-1 overflow-x-auto justify-around items-center p-2">
         {[
