@@ -22,7 +22,7 @@ function App() {
     <>
       {mobileLobby ? (
         <ErrorBoundary>
-          <Suspense fallback={<div>Loading Mobile View...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Navbar />
           </Suspense>
         </ErrorBoundary>
