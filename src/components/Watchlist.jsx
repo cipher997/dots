@@ -9,8 +9,8 @@ const Watchlist = () => {
   ];
 
   return (
-    <div className="flex w-full min-h-screen pt-10 bg-gray-50">
-      <main className="flex-1 rounded-xl p-6 max-w-4xl mx-auto">
+    <div className="flex w-full min-h-screen pt-10 bg-gray-50 pt-15">
+      <main className="flex-1 rounded-xl p-1 max-w-4xl mx-auto">
         <div className="bg-white shadow-md rounded-lg overflow-hidden">
           {sampleWatchlist.length > 0 ? (
             <ul>

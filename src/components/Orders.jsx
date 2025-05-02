@@ -85,7 +85,7 @@ const Orders = () => {
 
   return (
     <div className="min-h-screen pt-4 bg-gray-100">
-      <div className="max-w-3xl mx-auto pt-12 px-2">
+      <div className="max-w-3xl mx-auto pt-12 p-1">
         <div className="bg-white shadow rounded-lg p-4 mb-4">
           <div className="flex justify-between items-center">
             <div className="font-semibold text-gray-700">Net Position(1)</div>
