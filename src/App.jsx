@@ -1,10 +1,13 @@
-import { useEffect, useState } from 'react';
-import './App.css'
-import Navbar from './components/Navbar.JSX'
+import { useEffect, useState, Suspense, lazy } from 'react';
+import './App.css';
+import ErrorBoundary from './components/ErrorBoundary'; // Adjust path as needed
+
+const Navbar = lazy(() => import('./components/Navbar.JSX'));
 
 function App() {
   const [devicesize, setDevicesize] = useState(window.innerWidth);
   const [mobileLobby, setMobileLobby] = useState(devicesize < 1000);
+
   useEffect(() => {
     const handleResize = () => {
       const newDeviceSize = window.innerWidth;
@@ -17,12 +20,17 @@ function App() {
 
   return (
     <>
-      {mobileLobby ?
-        (<Navbar />) :
-        (<div>Dekstop</div>)}
-
+      {mobileLobby ? (
+        <ErrorBoundary>
+          <Suspense fallback={<div>Loading Mobile View...</div>}>
+            <Navbar />
+          </Suspense>
+        </ErrorBoundary>
+      ) : (
+        <div>Desktop</div>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
