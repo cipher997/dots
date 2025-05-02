@@ -8,8 +8,10 @@ import Orders from './Orders';
 import Holdings from './Holdings';
 import Positions from './Positions';
 import Bids from './Bids';
-import Profile from './Profile';
+// import Profile from './Profile';
 import GameTable from './GameTable';
+import Portfolio from './Portfolio';
+import Watchlist from './Watchlist';
 
 const Navbar = () => {
     const [login, setLogin] = useState(false)
@@ -24,13 +26,17 @@ const Navbar = () => {
             case 'Orders':
                 return <Orders />;
             case 'Holdings':
-                return <Holdings />;
-            case 'Positions':
+                // return <Holdings />;
+            case 'Position':
                 return <Positions />;
             case 'Bids':
                 return <Bids />;
+            case 'Portfolio':
+                return <Portfolio />;
+            case 'Watchlist':
+                return <Watchlist />;
             case 'Profile':
-                return <Profile />;
+                // return <Profile />;
             default:
                 return <Dashboard />;
         }
@@ -45,7 +51,6 @@ const Navbar = () => {
             {register ? (<Register setRegister={setRegister} setLogin={setLogin} setForgot={setForgot} />) : (null)}
             {forgot ? (<Forgot setForgot={setForgot} setLogin={setLogin} setRegister={setRegister} />) : (null)}
             <div className="">{renderComponent()}</div>
-
         </div>
     )
 }
